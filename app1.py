@@ -28,7 +28,7 @@ embeddings = download_hugging_face_embeddings()
 # Initializing Pinecone
 pc = Pinecone(api_key=os.environ.get("PINECONE_API_KEY"))
 
-index_name = "medical-chatbot"
+index_name = "cosmic"
 
 # Loading the index
 docsearch = PineconeVectorStore.from_existing_index(index_name, embeddings)
@@ -93,3 +93,4 @@ def chat():
 if __name__ == '__main__':
     # app.run(host="0.0.0.0", port=8080, debug=True)
     app.run()
+
